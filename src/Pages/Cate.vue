@@ -15,14 +15,15 @@
       <!-- 侧边栏 -->
     <Aside></Aside>
     </div>
-    
+    <Footer/>
   </div>
 </template>
 <script>
+import Footer from ".././components/Footer"
 import Aside from "./Aside"
 export default {
   components:{
-    Aside
+    Aside,Footer
   },
   data() {
     return {

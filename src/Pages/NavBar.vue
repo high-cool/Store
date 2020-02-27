@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="值得买"
+    <van-nav-bar :title="Tit"
                  fixed>
       <van-icon name="wap-home-o"
                 slot="left"
@@ -8,15 +8,19 @@
       <van-icon name="search"
                 slot="right" />
       <van-icon name="shopping-cart-o"
-                slot="right" @click="toCart"/>
+                slot="right"
+                @click="toCart" />
     </van-nav-bar>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {}
+    return {
+    }
   },
+    props:["Tit"],
+  
   methods: {
     toIndex() {
       this.$router.replace("/")
@@ -28,9 +32,13 @@ export default {
 }
 </script>
 <style scoped>
+.van-nav-bar{
+  background: #eee;
+}
 .van-icon {
   color: #888;
-  font-size: 0.68rem;
+  font-size: 0.80rem;
   margin: 0 0.2rem;
+  color: #000;
 }
 </style>

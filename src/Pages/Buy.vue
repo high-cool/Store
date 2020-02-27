@@ -1,10 +1,10 @@
 <template>
   <div>
-    <NavBar></NavBar>
+    <NavBar :Tit="title"></NavBar>
     <div class="content">
       <div class="shadow"
            style="position:relative">
-        <p style="position:absolute;top:0rem;left:0.5rem;fontSize:0.6rem;color:#fff;">值得买<span style="fontSize:0.4rem;marginLeft:0.2rem;">严选实物 用心生活</span></p>
+        <p style="position:absolute;top:0rem;left:0.5rem;fontSize:0.6rem;color:#fff;">值得买<span style="fontSize:0.4rem;marginLeft:0.2rem;">易网实物 用心生活</span></p>
       </div>
       <div class="main">
         <van-swipe class="my-swipe"
@@ -48,14 +48,17 @@
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 <script>
+import Footer from ".././components/Footer"
 import NavBar from "./NavBar"
 
 export default {
   data() {
     return {
+      title:"值得买",
       swiperArr: [
         [
           {
@@ -138,7 +141,7 @@ export default {
           {
             src: "static/img/buy_swiper2-7.png",
             tit: "工厂考察团",
-            subtit: "探访严选工厂"
+            subtit: "探访易网工厂"
           }
         ],
         [
@@ -210,14 +213,14 @@ export default {
         },
         {
           src: "static/img/other11.jpg",
-          tit: "网易严选陪你一起，等春来",
+          tit: "开淘易选陪你一起，等春来",
           smallimg: "static/img/smallimg.jpg",
           name: "选妹",
           seen: 26000
         },
         {
           src: "static/img/other11.jpg",
-          tit: "网易严选陪你一起，等春来",
+          tit: "开淘易选陪你一起，等春来",
           smallimg: "static/img/smallimg.jpg",
           name: "选妹",
           seen: 26000
@@ -226,7 +229,7 @@ export default {
     }
   },
   components: {
-    NavBar
+    NavBar,Footer
   }
 }
 </script>

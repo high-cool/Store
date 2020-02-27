@@ -24,7 +24,12 @@ import {
   CountDown,
   Sidebar,
   SidebarItem,
-  Icon
+  Icon,
+  SwipeCell ,
+  Card ,
+  Field ,
+  CellGroup,
+  Checkbox, CheckboxGroup
 } from "vant";
 
 Vue.use(Tabbar);
@@ -43,7 +48,7 @@ Vue.use(Grid)
   .use(Divider);
 Vue.use(CountDown);
 Vue.use(Sidebar).use(SidebarItem);
-Vue.use(Icon)
+Vue.use(Icon).use(SwipeCell ).use(Card ).use(Field ).use(CellGroup).use( Checkbox).use(CheckboxGroup)
 Vue.config.productionTip = false;
 
 Vue.filter("controlShow", (str, num) => {

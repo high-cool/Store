@@ -4,7 +4,7 @@
       <!-- 头部信息 -->
       <van-row class="header">
         <van-col span="6">
-          <p>网易严选</p>
+          <p>开淘易网</p>
         </van-col>
         <van-col span="14">
           <van-search v-model="value"
@@ -190,10 +190,13 @@
             @click="toUp"
             v-if="toUpShow">↑</span>
     </div>
+    <Footer />
 
   </div>
 </template>
 <script>
+import Footer from ".././components/Footer"
+
 export default {
   data() {
     return {
@@ -348,12 +351,11 @@ export default {
       ]
     }
   },
-  created() {
-    
+  components: {
+    Footer
   },
-  watch:{
-    
-  },
+  created() {},
+  watch: {},
   methods: {
     toUp() {
       let s = this.$refs.cont.getBoundingClientRect().top
@@ -362,9 +364,7 @@ export default {
           window.scrollTo(0, i)
         }, 0)
       }
-      
-    },
-    
+    }
   }
 }
 </script>

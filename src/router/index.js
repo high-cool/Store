@@ -5,6 +5,7 @@ import Cate from "../Pages/Cate";
 import Buy from "../Pages/Buy";
 import Cart from "../Pages/Cart";
 import My from "../Pages/My";
+import Login from "../Pages/Login";
 
 Vue.use(Router);
 
@@ -29,6 +30,9 @@ export default new Router({
     {
       path: "/my",
       component: My
+    },{
+      path:"/login",
+      component:Login
     }
   ]
 });
